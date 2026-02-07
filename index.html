@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omani Bread Ordering System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Omani Bread Ordering System</h1>
+            <button id="mode-toggle">Toggle Dark Mode</button>
+        </header>
+        <main>
+            <section id="gallery">
+                <h2>Image Gallery</h2>
+                <div class="image-container">
+                    <!-- Images will be added dynamically -->
+                </div>
+            </section>
+            <section id="reviews">
+                <h2>Customer Reviews</h2>
+                <div class="review-container">
+                    <!-- Reviews will be added dynamically -->
+                </div>
+            </section>
+            <section id="order-tracking">
+                <h2>Order Tracking</h2>
+                <form id="tracking-form">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" required>
+                    <button type="submit">Track Order</button>
+                </form>
+            </section>
+            <section id="payment">
+                <h2>Payment Options</h2>
+                <p>We accept various payment methods including credit cards and PayPal.</p>
+            </section>
+            <section id="delivery-calendar">
+                <h2>Delivery Calendar</h2>
+                <input type="date" id="delivery-date" required>
+            </section>
+            <section id="statistics">
+                <h2>Statistics Dashboard</h2>
+                <!-- Statistics will be displayed here -->
+            </section>
+        </main>
+        <footer>
+            <h2>Contact Us</h2>
+            <p>For inquiries, contact us via WhatsApp: <a href="https://wa.me/96895844580">+968 9584 4580</a></p>
+            <div id="notifications"></div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review-container {
+    margin-top: 20px;
+}
+
+#mode-toggle {
+    margin: 10px;
+}
+</style>
+
+<script>
+// script.js
+const toggleButton = document.getElementById('mode-toggle');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+});
+
+// Fetch images and reviews dynamically here
+</script>
